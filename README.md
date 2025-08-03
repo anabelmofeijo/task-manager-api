@@ -1,11 +1,7 @@
 
----
-
 # Task API (ToDo List with Authentication)
 
 Uma API RESTful desenvolvida com **FastAPI** para gestão pessoal de tarefas. Permite registro de usuários, login, criação e gerenciamento de tarefas com **autenticação baseada em JWT**. Ideal para aprender operações CRUD, autenticação e design de APIs.
-
----
 
 ## Features
 
@@ -15,8 +11,6 @@ Uma API RESTful desenvolvida com **FastAPI** para gestão pessoal de tarefas. Pe
 * Proteção de rotas com autenticação
 * Integração com banco de dados SQLite ou PostgreSQL
 
----
-
 ## Technologies Used
 
 * **Python 3.11+**
@@ -25,8 +19,6 @@ Uma API RESTful desenvolvida com **FastAPI** para gestão pessoal de tarefas. Pe
 * **SQLite** (pode ser trocado por PostgreSQL)
 * **Autenticação JWT (OAuth2)**
 * **Uvicorn** (servidor ASGI)
-
----
 
 ## Authentication Endpoints
 
@@ -52,7 +44,6 @@ Uma API RESTful desenvolvida com **FastAPI** para gestão pessoal de tarefas. Pe
 }
 ```
 
----
 
 ### POST `/auth/login`
 
@@ -76,8 +67,6 @@ Uma API RESTful desenvolvida com **FastAPI** para gestão pessoal de tarefas. Pe
 }
 ```
 
----
-
 ## Task Endpoints
 
 > ⚠️ Todos os endpoints abaixo requerem autenticação JWT via cabeçalho:
@@ -86,7 +75,6 @@ Uma API RESTful desenvolvida com **FastAPI** para gestão pessoal de tarefas. Pe
 Authorization: Bearer <access_token>
 ```
 
----
 
 ### POST `/tasks`
 
@@ -116,7 +104,6 @@ Authorization: Bearer <access_token>
 }
 ```
 
----
 
 ### GET `/tasks`
 
@@ -142,7 +129,6 @@ Authorization: Bearer <access_token>
 ]
 ```
 
----
 
 ### GET `/tasks/{id}`
 
@@ -160,7 +146,6 @@ Authorization: Bearer <access_token>
 }
 ```
 
----
 
 ### PUT `/tasks/{id}`
 
@@ -185,7 +170,6 @@ Authorization: Bearer <access_token>
 }
 ```
 
----
 
 ### DELETE `/tasks/{id}`
 
@@ -199,8 +183,6 @@ Authorization: Bearer <access_token>
 }
 ```
 
----
-
 ## O Que Você Vai Aprender com Este Projeto
 
 * Como construir APIs RESTful com FastAPI
@@ -209,8 +191,6 @@ Authorization: Bearer <access_token>
 * CRUD completo com rotas protegidas
 * Filtros, parâmetros de query e gerenciamento de dados por usuário
 * Uso prático de banco de dados (SQLite/PostgreSQL)
-
----
 
 ## ▶️ Como Rodar Localmente
 
@@ -235,16 +215,10 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
----
-
 ## 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT. Sinta-se à vontade para usar e modificar.
 
----
-
 ## Autor
 
 Desenvolvido por **Anabelmo Feijó** — apaixonado por tecnologia, APIs e soluções práticas para os problemas do dia a dia.
-
----
