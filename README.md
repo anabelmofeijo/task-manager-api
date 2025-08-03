@@ -1,29 +1,30 @@
 
-````markdown
+---
+
 # Task API (ToDo List with Authentication)
 
-A RESTful API built with **FastAPI** for personal task management. It allows user registration, login, task creation and management with **JWT-based authentication**. Perfect for learning CRUD operations, authentication, and API design.
+Uma API RESTful desenvolvida com **FastAPI** para gestão pessoal de tarefas. Permite registro de usuários, login, criação e gerenciamento de tarefas com **autenticação baseada em JWT**. Ideal para aprender operações CRUD, autenticação e design de APIs.
 
 ---
 
 ## Features
 
-- User registration and login (JWT)
-- Full CRUD for tasks (create, list, update, delete)
-- Filter tasks by status (pending, done)
-- Route protection with authentication
-- Integration with SQLite or PostgreSQL database
+* Registro e login de usuários (JWT)
+* CRUD completo para tarefas (criar, listar, atualizar, excluir)
+* Filtro de tarefas por status (pendente, concluída)
+* Proteção de rotas com autenticação
+* Integração com banco de dados SQLite ou PostgreSQL
 
 ---
 
 ## Technologies Used
 
-- **Python 3.11+**
-- **FastAPI**
-- **Pydantic**
-- **SQLite** (can be switched to PostgreSQL)
-- **JWT Authentication (OAuth2)**
-- **Uvicorn** (ASGI server)
+* **Python 3.11+**
+* **FastAPI**
+* **Pydantic**
+* **SQLite** (pode ser trocado por PostgreSQL)
+* **Autenticação JWT (OAuth2)**
+* **Uvicorn** (servidor ASGI)
 
 ---
 
@@ -31,19 +32,19 @@ A RESTful API built with **FastAPI** for personal task management. It allows use
 
 ### 📌 POST `/auth/register`
 
-**Description:** Register a new user.
+**Descrição:** Registra um novo usuário.
 
----
 **Payload:**
+
 ```json
 {
   "username": "anabelmo",
   "email": "ana@email.com",
   "password": "123456"
 }
-````
+```
 
-**Response:**
+**Resposta:**
 
 ```json
 {
@@ -55,7 +56,7 @@ A RESTful API built with **FastAPI** for personal task management. It allows use
 
 ### POST `/auth/login`
 
-**Description:** User login and JWT token generation.
+**Descrição:** Login do usuário e geração do token JWT.
 
 **Payload:**
 
@@ -66,7 +67,7 @@ A RESTful API built with **FastAPI** for personal task management. It allows use
 }
 ```
 
-**Response:**
+**Resposta:**
 
 ```json
 {
@@ -79,7 +80,7 @@ A RESTful API built with **FastAPI** for personal task management. It allows use
 
 ## Task Endpoints
 
-> ⚠️ All endpoints below require JWT authentication via header:
+> ⚠️ Todos os endpoints abaixo requerem autenticação JWT via cabeçalho:
 
 ```
 Authorization: Bearer <access_token>
@@ -89,7 +90,7 @@ Authorization: Bearer <access_token>
 
 ### POST `/tasks`
 
-**Description:** Create a new task.
+**Descrição:** Cria uma nova tarefa.
 
 **Payload:**
 
@@ -102,7 +103,7 @@ Authorization: Bearer <access_token>
 }
 ```
 
-**Response:**
+**Resposta:**
 
 ```json
 {
@@ -119,15 +120,15 @@ Authorization: Bearer <access_token>
 
 ### GET `/tasks`
 
-**Description:** List all tasks of the authenticated user.
+**Descrição:** Lista todas as tarefas do usuário autenticado.
 
-**Optional Query Parameter:**
+**Parâmetro opcional de consulta:**
 
 ```
 /tasks?status=pending
 ```
 
-**Response:**
+**Resposta:**
 
 ```json
 [
@@ -145,9 +146,9 @@ Authorization: Bearer <access_token>
 
 ### GET `/tasks/{id}`
 
-**Description:** Get details of a specific task.
+**Descrição:** Obtém detalhes de uma tarefa específica.
 
-**Response:**
+**Resposta:**
 
 ```json
 {
@@ -163,7 +164,7 @@ Authorization: Bearer <access_token>
 
 ### PUT `/tasks/{id}`
 
-**Description:** Update a task.
+**Descrição:** Atualiza uma tarefa existente.
 
 **Payload:**
 
@@ -176,7 +177,7 @@ Authorization: Bearer <access_token>
 }
 ```
 
-**Response:**
+**Resposta:**
 
 ```json
 {
@@ -188,9 +189,9 @@ Authorization: Bearer <access_token>
 
 ### DELETE `/tasks/{id}`
 
-**Description:** Delete a task.
+**Descrição:** Exclui uma tarefa.
 
-**Response:**
+**Resposta:**
 
 ```json
 {
@@ -200,35 +201,35 @@ Authorization: Bearer <access_token>
 
 ---
 
-## What You'll Learn from This Project
+## O Que Você Vai Aprender com Este Projeto
 
-* Building RESTful APIs with FastAPI
-* JWT Authentication with OAuth2 Password Flow
-* Data modeling and validation using Pydantic
-* Full CRUD with protected routes
-* Filters, query parameters, and user-based data management
-* Practical database use (SQLite/PostgreSQL)
+* Como construir APIs RESTful com FastAPI
+* Autenticação JWT com OAuth2 (Password Flow)
+* Modelagem e validação de dados com Pydantic
+* CRUD completo com rotas protegidas
+* Filtros, parâmetros de query e gerenciamento de dados por usuário
+* Uso prático de banco de dados (SQLite/PostgreSQL)
 
 ---
 
-## ▶️ How to Run Locally
+## ▶️ Como Rodar Localmente
 
-1. **Clone the repository:**
+1. **Clone o repositório:**
 
 ```bash
 git clone https://github.com/yourusername/todo-api.git
 cd todo-api
 ```
 
-2. **Create a virtual environment and install dependencies:**
+2. **Crie um ambiente virtual e instale as dependências:**
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/bin/activate  # ou venv\Scripts\activate no Windows
 pip install -r requirements.txt
 ```
 
-3. **Start the server:**
+3. **Inicie o servidor:**
 
 ```bash
 uvicorn main:app --reload
@@ -236,14 +237,14 @@ uvicorn main:app --reload
 
 ---
 
-## 📄 License
+## 📄 Licença
 
-This project is licensed under the MIT License. Feel free to use and modify it.
+Este projeto está licenciado sob a Licença MIT. Sinta-se à vontade para usar e modificar.
 
 ---
 
-## Author
+## Autor
 
-Developed by **Anabelmo Feijó** — passionate about technology, APIs, and practical solutions for everyday problems.
+Desenvolvido por **Anabelmo Feijó** — apaixonado por tecnologia, APIs e soluções práticas para os problemas do dia a dia.
 
-```
+---
