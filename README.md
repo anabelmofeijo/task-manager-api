@@ -1,12 +1,12 @@
 
 ````markdown
-# ✅ Task API (ToDo List with Authentication)
+# Task API (ToDo List with Authentication)
 
 A RESTful API built with **FastAPI** for personal task management. It allows user registration, login, task creation and management with **JWT-based authentication**. Perfect for learning CRUD operations, authentication, and API design.
 
 ---
 
-## 🚀 Features
+## Features
 
 - User registration and login (JWT)
 - Full CRUD for tasks (create, list, update, delete)
@@ -16,7 +16,7 @@ A RESTful API built with **FastAPI** for personal task management. It allows use
 
 ---
 
-## 📦 Technologies Used
+## Technologies Used
 
 - **Python 3.11+**
 - **FastAPI**
@@ -27,12 +27,13 @@ A RESTful API built with **FastAPI** for personal task management. It allows use
 
 ---
 
-## 🔐 Authentication Endpoints
+## Authentication Endpoints
 
 ### 📌 POST `/auth/register`
 
 **Description:** Register a new user.
 
+---
 **Payload:**
 ```json
 {
@@ -52,7 +53,7 @@ A RESTful API built with **FastAPI** for personal task management. It allows use
 
 ---
 
-### 📌 POST `/auth/login`
+### POST `/auth/login`
 
 **Description:** User login and JWT token generation.
 
@@ -76,7 +77,7 @@ A RESTful API built with **FastAPI** for personal task management. It allows use
 
 ---
 
-## 📋 Task Endpoints
+## Task Endpoints
 
 > ⚠️ All endpoints below require JWT authentication via header:
 
@@ -86,7 +87,7 @@ Authorization: Bearer <access_token>
 
 ---
 
-### 📌 POST `/tasks`
+### POST `/tasks`
 
 **Description:** Create a new task.
 
@@ -116,7 +117,7 @@ Authorization: Bearer <access_token>
 
 ---
 
-### 📌 GET `/tasks`
+### GET `/tasks`
 
 **Description:** List all tasks of the authenticated user.
 
@@ -142,7 +143,7 @@ Authorization: Bearer <access_token>
 
 ---
 
-### 📌 GET `/tasks/{id}`
+### GET `/tasks/{id}`
 
 **Description:** Get details of a specific task.
 
@@ -160,7 +161,7 @@ Authorization: Bearer <access_token>
 
 ---
 
-### 📌 PUT `/tasks/{id}`
+### PUT `/tasks/{id}`
 
 **Description:** Update a task.
 
@@ -185,7 +186,7 @@ Authorization: Bearer <access_token>
 
 ---
 
-### 📌 DELETE `/tasks/{id}`
+### DELETE `/tasks/{id}`
 
 **Description:** Delete a task.
 
@@ -199,7 +200,7 @@ Authorization: Bearer <access_token>
 
 ---
 
-## 🧠 What You'll Learn from This Project
+## What You'll Learn from This Project
 
 * Building RESTful APIs with FastAPI
 * JWT Authentication with OAuth2 Password Flow
@@ -241,7 +242,7 @@ This project is licensed under the MIT License. Feel free to use and modify it.
 
 ---
 
-## 🙋‍♂️ Author
+## Author
 
 Developed by **Anabelmo Feijó** — passionate about technology, APIs, and practical solutions for everyday problems.
 
